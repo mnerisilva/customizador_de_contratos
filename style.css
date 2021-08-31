@@ -75,7 +75,9 @@ header {
 
 .p {
     line-height: 1.6;
+    padding-bottom: 20px;
 }
 .p1 span {
-    background-color: #dedede;
+    /*background-color: #dedede;*/
+    border-bottom: solid 1px rgb(240, 235, 235);
 }
