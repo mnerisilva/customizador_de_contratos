@@ -15,17 +15,25 @@
         </header>
         <div class="content" ng-controller="myCtrl">
             <div class="aside">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="name" ng-model="name" placeholder="nome">
-                </div>
-                <div class="mb-3">
-                    <label for="natural" class="form-label">Natural</label>
-                    <input type="text" class="form-control" id="natural" ng-model="natural" placeholder="natural">
-                </div>
-                <div class="mb-3">
-                    <label for="prof" class="form-label">Profissão</label>
-                    <input type="text" class="form-control" id="prof" ng-model="prof" placeholder="Profissão">
+                <div class="form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name" ng-model="name" placeholder="nome">
+                    </div>
+                    <div class="mb-3">
+                        <label for="natural" class="form-label">Natural</label>
+                        <input type="text" class="form-control" id="natural" ng-model="natural" placeholder="natural">
+                    </div>
+                    <div class="mb-3">
+                        <label for="prof" class="form-label">Profissão</label>
+                        <input type="text" class="form-control" id="prof" ng-model="prof" placeholder="profissão">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Editar apenas os campos principais
+                        </label>
+                      </div>                    
                 </div>                
             </div>
             <div class="doc">
