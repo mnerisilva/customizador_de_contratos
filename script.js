@@ -3,6 +3,7 @@ const check = document.querySelector('.form-check input');
 const nome = document.querySelector('.form #name');
 const natural = document.querySelector('.form #natural');
 const profissao = document.querySelector('.form #prof');
+const cpf = document.querySelector('.form #cpf');
 
 if(check.getAttribute('checked')){
     habilitaCampos()
@@ -27,6 +28,8 @@ function habilitaCampos(){
         natural.style.opacity = 1;
         profissao.removeAttribute('disabled', true);
         profissao.style.opacity = 1;
+        cpf.removeAttribute('disabled', true);
+        cpf.style.opacity = 1;
 }
 
 function desabilitaCampos(){
@@ -35,5 +38,7 @@ function desabilitaCampos(){
     natural.setAttribute('disabled', true);
     natural.style.opacity = .2;
     profissao.setAttribute('disabled', true);
-    profissao.style.opacity = .2;  
+    profissao.style.opacity = .2;
+    cpf.setAttribute('disabled', true);
+    cpf.style.opacity = .2;  
 }
