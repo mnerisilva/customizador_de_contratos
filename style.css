@@ -75,7 +75,8 @@ header {
     line-height: 1.6;
     padding-bottom: 20px;
 }
-.p1 span {
+/*.p1 span {*/
+.no-edit {
     background-color: #f3efef;
     /*border-bottom: solid 1px black;*/
     width: 15px !important;
