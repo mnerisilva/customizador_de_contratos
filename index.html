@@ -6,20 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customizador de Contratos</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
-<body>
+<body ng-app="myApp">
     <div class="container">
         <header>
             <h1>GESTÃO DE CONTRATOS</h1>
         </header>
-        <div class="content">
-            <div class="aside">                
+        <div class="content" ng-controller="myCtrl">
+            <div class="aside">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="name" ng-model="name" placeholder="nome">
+                </div>
+                <div class="mb-3">
+                    <label for="natural" class="form-label">Natural</label>
+                    <input type="text" class="form-control" id="natural" ng-model="natural" placeholder="natural">
+                </div>
+                <div class="mb-3">
+                    <label for="prof" class="form-label">Profissão</label>
+                    <input type="text" class="form-control" id="prof" ng-model="prof" placeholder="Profissão">
+                </div>                
             </div>
             <div class="doc">
                 <div class="document">
-                    <div class="area-texto">
+                    <div class="area-texto" contentEditable="true">
                         <h4 class="title">Declaração Boa Conduta</h4>
-                        <p class="p p1" contentEditable="true">Eu, <span>Carlos Eduardo Silva</span>, <span>brasileiro</span>, <span>engraxate</span>, portador do CPF nº <span>555.444.103-15</span>, com domicílio em <span>Florianópolis</span>, DECLARO não ter sofrido condenação penal com trânsito em julgado, informo nunca ter sido excluído ou demitido do serviço público a bem da disciplina e declaro que também não respondo a processo penal ou administrativo que atente contra os Direitos Humanos e Garantias Fundamentais.</p>
+                        <p class="p p1">Eu, <span>{{ name }}</span>, <span>{{ natural }}</span>, <span>{{ prof }}</span>, portador do CPF nº <span>555.444.103-15</span>, com domicílio em <span>Florianópolis</span>, DECLARO não ter sofrido condenação penal com trânsito em julgado, informo nunca ter sido excluído ou demitido do serviço público a bem da disciplina e declaro que também não respondo a processo penal ou administrativo que atente contra os Direitos Humanos e Garantias Fundamentais.</p>
                         <p class="p p1" contentEditable="true">Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis. Suco de cevadiss deixa as pessoas mais interessantis. Paisis, filhis, espiritis santis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
                     </div>
                 </div>
@@ -27,7 +40,16 @@
         </div>
 
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            //$scope.name = "  ";
+            //$scope.natural = "________________";
+            //$scope.prof = "________________";
+        });
+    </script>    
 </body>
 </html>

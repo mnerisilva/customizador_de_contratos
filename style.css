@@ -79,7 +79,9 @@ header {
 }
 .p1 span {
     /*background-color: #dedede;*/
-    border-bottom: solid 1px rgb(240, 235, 235);
+    border-bottom: solid 1px black;
+    width: 15px !important;
+    height: 15px;
 }
 
 [contenteditable] {
