@@ -29,7 +29,7 @@
                         <input type="text" class="form-control" id="prof" ng-model="prof" placeholder="profissão">
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="" checked="true" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                           Editar apenas os campos principais
                         </label>
@@ -40,7 +40,7 @@
                 <div class="document">
                     <div class="area-texto" contentEditable="true">
                         <h4 class="title">Declaração Boa Conduta</h4>
-                        <p class="p p1">Eu, <span>{{ name }}</span>, <span>{{ natural }}</span>, <span>{{ prof }}</span>, portador do CPF nº <span>555.444.103-15</span>, com domicílio em <span>Florianópolis</span>, DECLARO não ter sofrido condenação penal com trânsito em julgado, informo nunca ter sido excluído ou demitido do serviço público a bem da disciplina e declaro que também não respondo a processo penal ou administrativo que atente contra os Direitos Humanos e Garantias Fundamentais.</p>
+                        <p class="p p1">Eu, <span contenteditable="false">{{ name }}</span>, natural de <span>{{ natural }}</span>, <span>{{ prof }}</span>, portador do CPF nº <span>555.444.103-15</span>, com domicílio em <span>Florianópolis</span>, DECLARO não ter sofrido condenação penal com trânsito em julgado, informo nunca ter sido excluído ou demitido do serviço público a bem da disciplina e declaro que também não respondo a processo penal ou administrativo que atente contra os Direitos Humanos e Garantias Fundamentais.</p>
                         <p class="p p1" contentEditable="true">Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis. Suco de cevadiss deixa as pessoas mais interessantis. Paisis, filhis, espiritis santis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
                     </div>
                 </div>
@@ -54,9 +54,9 @@
     <script>
         var app = angular.module('myApp', []);
         app.controller('myCtrl', function($scope) {
-            //$scope.name = "  ";
-            //$scope.natural = "________________";
-            //$scope.prof = "________________";
+            $scope.name = "Lorem Ipson";
+            $scope.natural = "Lorem Ipson";
+            $scope.prof = "Lorem Ipson";
         });
     </script>    
 </body>
