@@ -7,11 +7,17 @@
     <title>Customizador de Contratos</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        p {
+            font-size: 25px;
+        }
+    </style>
 </head>
 <body ng-app="myApp">
     <div class="container">
         <header>
-            <h1>GESTÃO DE CONTRATOS</h1>
+            <h1>GESTÃO DE DOCUMENTOS</h1>
         </header>
         <div class="content" ng-controller="myCtrl">
             <div class="aside">
@@ -39,19 +45,31 @@
                         </label>
                       </div>                    
                 </div>                
+                <!--<button onclick="Export2Word('exportContent', 'word-content');">Export as .doc</button>-->
+                <div class="content-footer">
+                    <button id="btn-export" onclick="exportHTML();"><i class="far fa-file-word fa-2x"></i></button>
+                </div>            
             </div>
             <div class="doc">
                 <div class="document">
-                    <div class="area-texto">
-                        <h4 class="title" contentEditable="true">Declaração Boa Conduta</h4>
-                        <p class="p p1"><span contentEditable="false" class="no-edit">Eu, </span><span contenteditable="false">{{ name }}</span>, natural de <span>{{ natural }}</span>, <span>{{ prof }}</span>, portador do CPF nº <span>{{ cpf }}</span>, com domicílio em <span>Florianópolis</span>, DECLARO não ter sofrido condenação penal com trânsito em julgado, informo nunca ter sido excluído ou demitido do serviço público a bem da disciplina e declaro que também não respondo a processo penal ou administrativo que atente contra os Direitos Humanos e Garantias Fundamentais.</p>
-                        <p class="p p1" contentEditable="true">Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis. Suco de cevadiss deixa as pessoas mais interessantis. Paisis, filhis, espiritis santis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
+                    <!--<div id="exportContent" class="area-texto" style="font-size: 20px;" size="40px" id="source-html">-->
+                    <div id="source-html" class="area-texto" style="font-size: 20px;" size="40px">
+                        <h1 class="title no-edit" contentEditable="true">
+                            <center>Declaração Boa Conduta</center>
+                        </h1>
+                        <p class="p p1">
+                            <span class="no-edit" contentEditable="false">Eu, </span><span class="editable" contenteditable="true">{{ name }}</span>, natural de <span class="editable" contentEditable="true">{{ natural }}</span>, <span class="editable" contentEditable="true">{{ prof }}</span>, portador do CPF nº <span class="editable" contentEditable="true">{{ cpf }}</span>, com domicílio em <span>Florianópolis</span>, DECLARO não ter sofrido condenação penal com trânsito em julgado, informo nunca ter sido excluído ou demitido do serviço público a bem da disciplina e declaro que também não respondo a processo penal ou administrativo que atente contra os Direitos Humanos e Garantias Fundamentais.
+                        </p>
+                        <p class="p p1 no-edit" contentEditable="false">
+                            Mussum Ipsum, cacilds vidis litro abertis. Diuretics paradis num copo é motivis de denguis. Suco de cevadiss deixa as pessoas mais interessantis. Paisis, filhis, espiritis santis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-
+        <!--<button onclick="Export2Word('exportContent', 'word-content');">Export as .doc</button>-->
     </div>
+    <script src="html_for_doc.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
@@ -63,6 +81,6 @@
             $scope.prof = "Lorem Ipson";
             $scope.cpf = "999.999.999.99";
         });
-    </script>    
+    </script>     
 </body>
 </html>
