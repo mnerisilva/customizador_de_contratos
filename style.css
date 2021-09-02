@@ -48,8 +48,9 @@ header {
     align-self: center;
     width: 97%;
     height: 100%;
-    background-color: #fff;
+    background-color: #fdfdfd;
     border: solid thin #f8f6f6;
+    padding-top: 100px;
 }
 
 .area-texto {
