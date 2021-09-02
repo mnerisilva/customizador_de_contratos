@@ -27,9 +27,11 @@ header {
     /*background-color: cornsilk;*/
 }
 
-.aside {
-    width: 30%;
+.aside-left {
+    min-width: 250px;
+    max-width: 450px;
     height: 100vh;
+    max-width: 500px;
     background-color: cadetblue;
 }
 
@@ -37,7 +39,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    max-width: 1200px;
+    min-width: 1000px;
     height: 100vh;
     background-color: #f1f1f3;
 }
@@ -54,11 +57,12 @@ header {
 }
 
 .area-texto {
-    width: 80%;
+    width: 85%;
     height: 100%;
     background-color: #fff;
     border: solid thin #f1eaea57;
-    padding: 55px 0
+    padding: 55px 55px;
+    box-shadow: 1px 1px 1px 1px #f7eeee6c;
 }
 
 .title {
@@ -89,7 +93,7 @@ header {
     outline: 0px solid transparent;
   }
 
- header h1 {
+ header h2 {
       color: #fff;
       text-align: center;
       padding-top: 15px
@@ -139,4 +143,11 @@ header {
     height: 20px;
     margin-top: 2px;
     background-color: crimson;
+}
+
+.aside-right {
+    max-width: 80%;
+    min-width: 300px;
+    height: 100vh;
+    padding: 50px;
 }
